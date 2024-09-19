@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    background: rgb(2,0,36);
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,45,121,1) 35%, rgba(0,212,255,1) 100%); */
+    overflow: hidden;
+}
+
+.night{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    border: 1px solid black;
+
+    background: url('./assets/Img_1.png');
+    background-size: cover;
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0,0,0,0.3);
+    overflow-x: hidden;
+}
+
+.surface{
+    height: 140px;
+    width: 500%;
+    background: url('./assets/Img_02.png');
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-repeat: repeat-x;
+    animation: moveRight 6s linear infinite;
+}
+
+.car{
+    position: absolute;
+    bottom: 4%;
+    left: 24%;
+
+}
+
+.cloud {
+    top: 4%;
+    left: 0%;
+    display: flex;
+   animation: runCloud 20s linear infinite;
+
+}
+
+@keyframes moveRight {
+    100% {
+        transform: translateX(-2950px);
+    }
+}
+
+@keyframes runCloud {
+    from {
+        transform: translateX(0);
+    }to{
+        transform: translateX(calc(-2560px * 5));
+    }
+}
